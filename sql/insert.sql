@@ -38,4 +38,16 @@ INSERT INTO category
 VALUES(3, '모자', 'far fa-circle', '모자', now(), now());
 INSERT INTO category
 (category_id_parent, title, icon, description, create_date, update_date)
-VALUES(3, '가방', 'far fa-circle', '가방', now(), now());
+VALUES(3, '가방', 'far fa-circle', '가방', now(), NOW());
+
+-- product ----
+-- 티셔츠
+
+INSERT INTO product
+(name, price, description, product_img, color, size, category_id, discount, create_date, update_date)
+VALUES('Color T-shirts', 29800, '남녀 공용으로 누구나 입을 수 있는 티셔츠 입니다. 사이즈가 넉넉히 나왔으니 선택하실 때 참조 하세요.', '/images/clothing-2.png', 'Green,Blue,Purple,Red,Orange', '90,95,100,105', 35, 0, NOW(), NOW());
+
+-- 청바지
+INSERT INTO product
+(name, price, description, product_img, color, size, category_id, discount, create_date, update_date)
+VALUES('Blue Jeans', 39800, '일자 청바지입니다.', '/images/pants-2.png', 'Blue,Black', '28,29,30,31,32,33,34', 36, 0, NOW(), NOW());
