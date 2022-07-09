@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean checkusername(String username) throws Exception {
-		return false;
+		return userDao.findUserByUsername(username) == null; // select의 결과가 null인지 아닌지
 	}
 
 	@Override
