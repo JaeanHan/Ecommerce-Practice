@@ -21,14 +21,16 @@ header {
 }
 header ul {
 	display: flex;
+	justify-content: space-around;
 	width: 900px;
 	height: 200px;
 	border: 1px solid black;
+	
 }
 
 header ul li {
-	width: 300px;
-	height: 300px;
+	width: 100px;
+	height: 200px;
 	text-align: center;
 	line-height: 200px;
 }

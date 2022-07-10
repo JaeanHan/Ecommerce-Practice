@@ -36,9 +36,9 @@ function submit() {
 	})
 }
 
-function errorMessage(response, status, error) {
+function errorMessage(request, status, error) {
 	alert("요청 실패");
-	console.log(request.status); //매개변수로 받아오는 status는 자리 채워주기 용도
+	console.log(request.status);
 	console.log(request.responseText);
 	console.log(error);
 }

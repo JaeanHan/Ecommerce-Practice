@@ -1,4 +1,7 @@
 <factorypath>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/mariadb/jdbc/mariadb-java-client/2.7.6/mariadb-java-client-2.7.6.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/javax/mail/mail/1.4.7/mail-1.4.7.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/javax/activation/activation/1.1/activation-1.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/google/code/gson/gson/2.9.0/gson-2.9.0.jar" enabled="true" runInBatchMode="false"/>
 </factorypath>

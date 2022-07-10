@@ -28,6 +28,10 @@
 			<h2>footer here </h2>
 		</footer>
 	</div>
+	<script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-latest.min.js"
+    ></script>
 	<script type="text/javascript" src="/statics/js/index.js"></script>
 </body>
 </html>

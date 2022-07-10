@@ -38,7 +38,6 @@ public class UserDaoImpl implements UserDao {
 	
 	@Override
 	public int save(User user) throws Exception {
-		int result = 0;
 		sql = "INSERT INTO user_mst\n"
 				+ "VALUES(\n"
 				+ "	0,\n"
@@ -51,23 +50,7 @@ public class UserDaoImpl implements UserDao {
 				+ "	NOW()\n"
 				+ ");";
 		
-		con = pool.getConnection();
-		
-		try {
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(Insert.USERNAME.value(), user.getUsername());
-			pstmt.setString(Insert.EMAIL.value(), user.getEmail());
-			pstmt.setString(Insert.PASSWORD.value(), user.getPassword());
-			pstmt.setString(Insert.NAME.value(), user.getName());
-			pstmt.setString(Insert.PROVIDER.value(), user.getProvider());
-			
-			result = pstmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			pool.freeConnection(con, pstmt);
-		}
-		return result;
+		return (int) sqlExecuteUpdate(sql, user);
 	}
 
 	@Override
@@ -132,4 +115,24 @@ public class UserDaoImpl implements UserDao {
 		return 0;
 	}
 
+	private Object sqlExecuteUpdate(String sql, User user) throws Exception {
+		Object result = null;
+		con = pool.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(Insert.USERNAME.value(), user.getUsername());
+			pstmt.setString(Insert.EMAIL.value(), user.getEmail());
+			pstmt.setString(Insert.PASSWORD.value(), user.getPassword());
+			pstmt.setString(Insert.NAME.value(), user.getName());
+			pstmt.setString(Insert.PROVIDER.value(), user.getProvider());
+			
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt);
+		}
+		return (Object) result;
+	}
 }

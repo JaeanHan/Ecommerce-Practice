@@ -1,9 +1,6 @@
-package web.servlet;
+package web.servlet.api.auth;
 
 import java.io.IOException;
-import java.lang.System.Logger;
-import java.util.Enumeration;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,23 +8,23 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/index")
-public class IndexServlet extends HttpServlet {
+import com.google.gson.Gson;
+
+import domain.entity.User;
+
+@WebServlet("/api/v1/principal")
+public class PrincipalServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-
-		request.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(request, response);
 		
-		Enumeration<String> enum_session = session.getAttributeNames();
-
-		while(enum_session.hasMoreElements()) {
-			String key = enum_session.nextElement();
+		Gson gson = new Gson();
+		
+		String userJson = gson.toJson((User)session.getAttribute("principal"));
 	
-			System.out.println("key : " + key);
-			System.out.println("value : " + session.getAttribute(key));
-		}
+		response.setContentType("application/json; charset=UTF-8");
+		response.getWriter().print(userJson);
 	}
 
 }

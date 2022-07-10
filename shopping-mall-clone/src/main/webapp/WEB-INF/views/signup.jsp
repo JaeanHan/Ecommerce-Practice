@@ -30,7 +30,6 @@
                 id="username"
                 class="user-input"
                 autocomplete="off"
-                autofocus
               />
               <span class="username-validation"></span>
             </td>
@@ -48,6 +47,7 @@
                 autocomplete="off"
               />
               <span class="view-password"><i class="fa-solid fa-eye"></i></span>
+              <span class="password-validation"></span>
             </td>
           </tr>
           <tr>
@@ -62,6 +62,7 @@
                 class="user-input"
                 autocomplete="off"
               />
+              <span class="view-password-check"><i class="fa-solid fa-eye"></i></span>
               <span class="password-check-result"></span>
             </td>
           </tr>
@@ -90,8 +91,10 @@
                 placeholder="email"
                 id="email"
                 class="user-input"
+                autocomplete="off"
               />
               <span class="email-check-result"></span>
+              <span class="email-send-state"></span>
             </td>
           </tr>
           <tr>
@@ -99,10 +102,13 @@
             <td>
               <input
                 type="text"
-                placeholder="validation code"
-                id="validation-code"
+                placeholder="verification code"
+                id="email-verification"
                 class="user-input"
+                autocomplete="off"
+                disabled
               />
+              <span class="verify-email"><i class="fa-solid fa-magnifying-glass"></i></span>
             </td>
           </tr>
           <tr>
@@ -118,14 +124,15 @@
               </button>
             </th>
             <th>
-              <button type="button" id="submit">
-                confirm
+              <button type="button" id="submit" disabled>
+                join
                 <i class="fa-solid fa-check"></i>
               </button>
             </th>
           </tr>
         </table>
       </form>
+      <div class="user-log"></div>
     </div>
     <script
       type="text/javascript"
