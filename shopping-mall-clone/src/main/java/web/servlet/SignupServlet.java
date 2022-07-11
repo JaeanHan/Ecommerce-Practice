@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import config.ServletContextConfig;
 import service.user.UserService;
 import service.user.UserServiceImpl;
 import web.dto.SignupReqDto;
@@ -19,7 +20,7 @@ public class SignupServlet extends HttpServlet {
 	private final UserService userService;
 	
 	public SignupServlet() {
-		userService = new UserServiceImpl();
+		userService = ServletContextConfig.getInstance().getUserService();
 	}
 
 	@Override

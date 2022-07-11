@@ -39,7 +39,7 @@ public class MailSend {
 			
 			mimeMessage.setSubject("Greeting From Ecommerce Project!");
 			
-			mimeMessage.setText("Verification code is : " + varificationCode );
+			mimeMessage.setText("Your verification code is : " + varificationCode );
 			
 			Transport.send(mimeMessage);
 			

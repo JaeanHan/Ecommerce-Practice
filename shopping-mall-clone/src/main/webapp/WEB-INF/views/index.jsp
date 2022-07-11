@@ -12,9 +12,9 @@
 		<header>	
 		<h1>Hello this is index</h1>
 		<ul>
-			<li>로그인</li>
-			<li>회원가입</li>
-			<li>공지</li>
+			<li><i class="fa-solid fa-fire"></i> 로그인</li>
+			<li><i class="fa-solid fa-user-plus"></i> 회원가입</li>
+			<li><i class="fa-solid fa-bell"></i> 공지</li>
 		</ul>
 		</header>
 		<section>
@@ -32,6 +32,7 @@
       type="text/javascript"
       src="https://code.jquery.com/jquery-latest.min.js"
     ></script>
+    <script src="https://kit.fontawesome.com/3e27d22283.js" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="/statics/js/index.js"></script>
 </body>
 </html>

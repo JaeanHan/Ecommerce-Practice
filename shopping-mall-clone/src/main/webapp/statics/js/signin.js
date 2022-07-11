@@ -1,6 +1,7 @@
 const userInputs = document.querySelectorAll(".user-input");
 const submitBtn = document.querySelector(".submitBtn");
 const toSignupBtn = document.querySelector(".toSignup");
+const maintain = document.querySelector("#remember-state");
 
 toSignupBtn.addEventListener("click", () => location.href="/signup");
 
@@ -21,7 +22,8 @@ function submit() {
 		url: "/signin",
 		data: {
 			username: userInputs[0].value,
-			password: userInputs[1].value
+			password: userInputs[1].value,
+			maintain: maintain.checked
 		},
 		dataType: "text",
 		success : (response) => {

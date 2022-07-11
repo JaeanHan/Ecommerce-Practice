@@ -28,6 +28,7 @@ pageEncoding="UTF-8"%>
               placeholder="username"
               id="username"
               class="user-input"
+              value="${username}"
             />
           </td>
         </tr>
@@ -41,8 +42,20 @@ pageEncoding="UTF-8"%>
               placeholder="password"
               id="password"
               class="user-input"
+              value="${password}"
             />
           </td>
+        </tr>
+        <tr>
+        <td>
+          <input
+            type="checkbox"
+            id="remember-state"
+            checked="${maintain}"
+            title="only for 24h!"
+          />
+          <label for="remember-state">Remember?</label>
+        </td>
         </tr>
         <tr>
           <th>
