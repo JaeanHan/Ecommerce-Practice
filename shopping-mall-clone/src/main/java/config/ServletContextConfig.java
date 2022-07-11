@@ -30,7 +30,7 @@ public class ServletContextConfig {
 			userDao = new UserDaoImpl();
 		}
 		
-		if(userDao == null) {
+		if(userService == null) {
 			userService = new UserServiceImpl();
 		}
 	}
