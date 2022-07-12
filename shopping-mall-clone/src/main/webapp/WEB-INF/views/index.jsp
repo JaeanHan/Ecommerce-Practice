@@ -14,7 +14,7 @@
 		<ul>
 			<li><i class="fa-solid fa-fire"></i> 로그인</li>
 			<li><i class="fa-solid fa-user-plus"></i> 회원가입</li>
-			<li><i class="fa-solid fa-bell"></i> 공지</li>
+			<li><i class="fa-solid fa-bullhorn"></i> 공지</li>
 		</ul>
 		</header>
 		<section>
